@@ -19,10 +19,9 @@ const config = {
 const client = new pg.Client(config);
 
 client.connect(err => {
-    if (err) throw err;
+    console.log(req.body);
     else {
         queryDatabase();
-    }
 });
 
 function queryDatabase() {
@@ -49,4 +48,3 @@ app.post('/show', (req, res) => {
     console.log(req.body)
 })
 
-/*app.post*/
